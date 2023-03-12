@@ -1,2 +1,12 @@
 $govuk-global-styles: true;
 @import "node_modules/govuk-frontend/govuk/all";
+.column {
+  float: left;
+  width: 40%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

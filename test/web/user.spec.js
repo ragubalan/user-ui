@@ -16,7 +16,7 @@ describe('/', function () {
       .get('/')
       .expect(200)
       .then(res => {
-        expect(res.text).toContain('<h1>Some Useful Government Service</h1>');
+        expect(res.text).toContain('Some Useful Government Service');
       })
   })
 });

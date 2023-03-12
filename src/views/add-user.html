@@ -1,7 +1,39 @@
 {% extends "layout.njk" %}
 {% block content %}
 
-<div>
-    <h1>Some Useful Government Service</h1>
+<div class="govuk-width-container app-site-width-container">
+    <h1 class="govuk-heading-l">Some Useful Government Service</h1>
+    <form action="/" method="post" style="margin: 10px;">
+        <div class="govuk-form-group row">
+            <label class="govuk-label column" for="name">
+                Name
+            </label>
+            <input class="govuk-input column" id="name" name="name" type="text" spellcheck="false" required>
+        </div>
+        <div class="govuk-form-group row">
+            <label class="govuk-label column" for="sex">
+                Sex
+            </label>
+            <input type="radio" id="male" name="sex" value="Male">
+            <label class="govuk-label" style="display: inline-block; padding-right: 80px;" for="male">Male</label>
+            <input type="radio" id="female" name="sex" value="Female">
+            <label class="govuk-label" style="display: inline-block" for="female">Female</label>
+        </div>
+        <div class="govuk-form-group row">
+            <label class="govuk-label column" for="age">
+                Age
+            </label>
+            <input class="govuk-input column" id="age" name="age" type="number" min="1" max="100" required>
+        </div>
+        <div class="govuk-form-group row">
+            <label class="govuk-label column" for="country">
+                Country
+            </label>
+            <select class="govuk-select" name="country" id="country">
+                <option value="" disabled selected>Choose Country</option>
+            </select>
+        </div>
+        <button class="govuk-button" type="submit">Apply</button>
+    </form>
 </div>
 {% endblock %}
