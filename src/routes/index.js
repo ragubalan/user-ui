@@ -1,5 +1,5 @@
-let  express = require('express')
-let  router = express.Router()
+import express from 'express';
+const router = express.Router();
 
 router.get('/', async  function(req, res, next) {
   let data = {
@@ -11,4 +11,4 @@ router.get('/', async  function(req, res, next) {
   res.render('index.njk', data)
 })
 
-module.exports = router
+export default router;
