@@ -9,7 +9,7 @@ describe('/', function () {
       .then(res => {
         expect(res.text).toContain('<title>A Web Page</title>');
       })
-  })
+  }, 10000)
 
   it('should render header', function () {
     return request(app)

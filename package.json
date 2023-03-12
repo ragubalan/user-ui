@@ -4,14 +4,15 @@
   "author": "Ragubalan Durairaj",
   "private": true,
   "scripts": {
-    "start": "npm run dev",
     "build": "npm-run-all clean transpile",
-    "server": "nodemon ./dist-server/bin/www",
-    "dev": "npm-run-all build sass copy server",
-    "transpile": "babel ./src --out-dir dist-server",
     "clean": "rimraf dist-server public",
+    "copy": "copyfiles -u 2 src/scss/assets/** public",
+    "dev": "npm-run-all build sass copy server",
     "sass": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/scss/stylesheets/style.scss ./public/stylesheets/style.css",
-    "copy": "copyfiles -u 2 src/scss/assets/** public"
+    "server": "nodemon ./dist-server/bin/www",
+    "start": "npm run dev",
+    "test": "jest --ci --coverage",
+    "transpile": "babel ./src --out-dir dist-server"
   },
   "nodemonConfig": {
     "watch": [
