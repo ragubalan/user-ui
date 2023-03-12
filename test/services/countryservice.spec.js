@@ -3,10 +3,10 @@ import superagent from 'superagent';
 import mockSuperagent from 'superagent-mock';
 import Userservice from "../../src/services/userservice";
 
-describe('User Service', function () {
+describe('Country Service', function () {
   config();
 
-  const service = new Userservice('https://restcountries.com/v3.1/region/europe');
+  const service = new Userservice(process.env.COUNTRY_API_URL);
   let superagentMock;
 
   beforeEach(() => {
