@@ -31,6 +31,9 @@
             </label>
             <select class="govuk-select" name="country" id="country">
                 <option value="" disabled selected>Choose Country</option>
+                {% for country in countries %}
+                <option value="{{country}}">{{ country }}</option>
+                {% endfor %}
             </select>
         </div>
         <button class="govuk-button" type="submit">Apply</button>
