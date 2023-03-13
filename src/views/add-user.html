@@ -14,9 +14,9 @@
             <label class="govuk-label column" for="sex">
                 Sex
             </label>
-            <input type="radio" id="male" name="sex" value="Male">
+            <input type="radio" id="male" name="sex" value="Male" required>
             <label class="govuk-label" style="display: inline-block; padding-right: 80px;" for="male">Male</label>
-            <input type="radio" id="female" name="sex" value="Female">
+            <input type="radio" id="female" name="sex" value="Female" required>
             <label class="govuk-label" style="display: inline-block" for="female">Female</label>
         </div>
         <div class="govuk-form-group row">
@@ -29,7 +29,7 @@
             <label class="govuk-label column" for="country">
                 Country
             </label>
-            <select class="govuk-select" name="country" id="country">
+            <select class="govuk-select" name="country" id="country" required>
                 <option value="" disabled selected>Choose Country</option>
                 {% for country in countries %}
                 <option value="{{country}}">{{ country }}</option>
